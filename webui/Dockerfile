@@ -1,7 +1,7 @@
-FROM node:4-slim
+FROM node:alpine
 
 # The following information is typically supplied by the DEV team
-RUN npm install express && npm install redis
+RUN npm install express && npm install redis && apk add curl
 
 # Copy the source code from the git repo into the Docker image
 COPY . .
