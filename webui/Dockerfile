@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:4-slim
 
 # The following information is typically supplied by the DEV team
 RUN npm install express && npm install redis && apk add curl
